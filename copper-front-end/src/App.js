@@ -1,21 +1,9 @@
-import './App.css';
 import { Provider } from "react-redux";
-import store from "./Redux/Store";
 import Table from "../src/Components/Table";
-import { useEffect } from "react";
-import { GetTableDataService } from "../src/Network/Services/TableDataService";
+import './App.css';
+import store from "./Redux/Store";
 
 function App() {
-
-  const fetchingFunction = async () => {
-    console.log("Data", await GetTableDataService());
-
-  }
-
-  useEffect(() => {
-    fetchingFunction()
-  }, [])
-
   return (
     <Provider store={store}>
       <div >

@@ -1,8 +1,8 @@
-import { setToken } from "../Middleware/tableData";
+import { getTableData } from "../Middleware/tableData";
 
 export const mapDispatchToProps = (dispatch) => {
   return {
-    setLoginToken: () => dispatch(setToken()),
+    getTableData: () => dispatch(getTableData()),
   };
 };
 

@@ -1,8 +1,8 @@
 import { GET_TABLE_DATA } from "../Types";
 
-export const tokenAction = (token) => {
+export const getTableDataAction = (data) => {
   return {
     type: GET_TABLE_DATA,
-    payload: token,
+    payload: data,
   };
 };

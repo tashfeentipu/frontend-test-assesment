@@ -6,7 +6,7 @@ const TableHeader = (props) => {
     <tr>
       <th><Input type="checkbox" /> </th>
       <th>Date</th>
-      <th>Action</th>
+      <th>Type</th>
       <th>Account</th>
       <th>Currency</th>
       <th>Amount</th>

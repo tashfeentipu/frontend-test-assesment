@@ -1,7 +1,7 @@
 import { GET_TABLE_DATA } from "../Types";
 
 const initialState = {
-  tableData: ""
+  tableData: []
 };
 
 export default function tableReducer(state = initialState, action) {
