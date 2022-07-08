@@ -1,4 +1,4 @@
-import { setToken } from "../Middleware/auth";
+import { setToken } from "../Middleware/tableData";
 
 export const mapDispatchToProps = (dispatch) => {
   return {
@@ -8,6 +8,6 @@ export const mapDispatchToProps = (dispatch) => {
 
 export const mapStateToProps = (state) => {
   return {
-    loginToken: state.auth.loginToken,
+    tableData: state.table.tableData,
   };
 };

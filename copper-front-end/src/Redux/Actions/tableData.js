@@ -1,8 +1,8 @@
-import { SET_LOGIN_TOKEN } from "../Types";
+import { GET_TABLE_DATA } from "../Types";
 
 export const tokenAction = (token) => {
   return {
-    type: SET_LOGIN_TOKEN,
+    type: GET_TABLE_DATA,
     payload: token,
   };
 };

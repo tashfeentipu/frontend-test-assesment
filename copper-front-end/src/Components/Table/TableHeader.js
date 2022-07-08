@@ -1,11 +1,16 @@
 import React from "react";
+import { Input } from "reactstrap";
 
 const TableHeader = (props) => {
   return <thead>
     <tr>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Username</th>
+      <th><Input type="checkbox" /> </th>
+      <th>Date</th>
+      <th>Action</th>
+      <th>Account</th>
+      <th>Currency</th>
+      <th>Amount</th>
+      <th>Action</th>
     </tr>
   </thead>
 

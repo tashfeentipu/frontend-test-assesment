@@ -1,9 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import authReducer from "../Reducers/auth";
+import tableReducer from "../Reducers/tableData";
 
 const rootReducer = {
   reducer: {
-    auth: authReducer,
+    table: tableReducer,
   }
 };
 const store = configureStore(rootReducer);

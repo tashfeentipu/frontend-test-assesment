@@ -1,4 +1,4 @@
-import { tokenAction } from "../Actions/auth";
+import { tokenAction } from "../Actions/tableData";
 
 export const setToken = () => {
     return async (dispatch) => {
