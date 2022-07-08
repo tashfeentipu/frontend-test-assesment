@@ -1,12 +1,13 @@
 import './App.css';
 import { Provider } from "react-redux";
 import store from "./Redux/Store";
+import Table from "../src/Components/Table";
 
 function App() {
   return (
     <Provider store={store}>
       <div >
-        Tashfeen
+        <Table />
       </div>
     </Provider>
   );
