@@ -1,23 +1,9 @@
 import { connect } from "react-redux";
 import { Input } from "reactstrap";
+import OrderStatusComponent from "./OrderStatusComponent";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 
 const TableBody = (props) => {
-    const orderStatusComponent = (tableRowData) => {
-        if(tableRowData.orderStatus && tableRowData.status){
-            return <div>
-                    {tableRowData.status}
-                </div>
-        }
-        return <>
-            <button onClick={() => {
-                props.rejectTransactionById(tableRowData.orderId)
-            }}>Reject</button>
-            <button onClick={() => {
-                props.approveTransactionById(tableRowData.orderId)
-            }}>Approve</button></>
-    }
-
     return <tbody>
         {
             props.tableData.map(element => {
@@ -29,7 +15,7 @@ const TableBody = (props) => {
                     <td>{element.baseCurrency}</td>
                     <td>{element.amount}</td>
                     <td>
-                        {orderStatusComponent(element)}
+                        <OrderStatusComponent tableRowData={element} />
                     </td>
                 </tr>
 

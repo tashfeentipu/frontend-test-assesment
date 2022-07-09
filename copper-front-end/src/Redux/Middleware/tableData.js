@@ -1,5 +1,5 @@
-import { getTableDataAction, updateTableDataByIdAction } from "../Actions/tableData";
-import { getTableDataService, updateTableDataByIdService } from "../../Network/Services/TableDataService";
+import { getTableDataAction, updateTableDataByIdAction, updateTableDataByIdsAction } from "../Actions/tableData";
+import { getTableDataService, updateTableDataByIdService, updateTableDataByIdsService } from "../../Network/Services/TableDataService";
 
 export const getTableData = () => {
     return async (dispatch) => {
@@ -23,11 +23,11 @@ export const updateTableDataById = (orderId, header) => {
     };
 };
 
-export const updateTableDataInBulk = (orderIdArray) => {
+export const updateTableDataByIds = (orderIds, header) => {
     return async (dispatch) => {
         try {
-            const response = await getTableDataService();
-            dispatch(getTableDataAction(response))
+            const response = await updateTableDataByIdsService(JSON.stringify({ orderIds }), header);
+            dispatch(updateTableDataByIdsAction(response))
         } catch (error) {
             console.log(error);
         }

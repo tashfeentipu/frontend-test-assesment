@@ -13,10 +13,11 @@ export const GetAsync = async (baseURL) => {
   }
 };
 
-export const PutAsync = async (baseURL, headers) => {
+export const PutAsync = async (baseURL, body, headers) => {
   const response = await fetch(baseURL, {
     headers: headers,
     method: "PATCH",
+    body: body
   });
   return response.json();
 };

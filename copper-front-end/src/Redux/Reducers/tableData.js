@@ -1,4 +1,4 @@
-import { GET_TABLE_DATA, UPDATE_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID } from "../Types";
+import { GET_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID, UPDATE_TABLE_DATA_BY_IDS } from "../Types";
 
 const initialState = {
   tableData: []
@@ -17,7 +17,6 @@ export default function tableReducer(state = initialState, action) {
       const modifiedRowIndex = newArray.findIndex((element) => element.orderId === action.payload.orderId)
       if (modifiedRowIndex !== -1) {
         newArray[modifiedRowIndex] = action.payload
-        console.log("In Reducer", newArray[modifiedRowIndex]);
         return {
           ...state,
           tableData: newArray
@@ -26,7 +25,8 @@ export default function tableReducer(state = initialState, action) {
       return {
         ...state,
       }
-    case UPDATE_TABLE_DATA:
+
+    case UPDATE_TABLE_DATA_BY_IDS:
       return {
         ...state,
         tableData: action.payload
