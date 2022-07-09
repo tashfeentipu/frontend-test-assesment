@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { Input } from "reactstrap";
 import OrderStatusComponent from "./OrderStatusComponent";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
+import { dateConverter, timeConverter } from "../../Handlers";
 
 const TableBody = (props) => {
     return <tbody>
@@ -13,8 +14,20 @@ const TableBody = (props) => {
                         onChange={(event) => {
                             props.selectTableData(element.orderId, event.target.checked)
                         }} /> </td>
-                    <td>{element.createdAt}</td>
-                    <td>{element.orderType}</td>
+                    <td><div>
+                        {dateConverter(element.createdAt).date}
+                    </div>
+                        <div>
+                            {dateConverter(element.createdAt).month}
+                        </div>
+                    </td>
+                    <td><div>
+                        {element.orderType}
+                    </div>
+                        <div>
+                            {timeConverter(element.createdAt)}
+                        </div>
+                    </td>
                     <td>{element.portfolioName}</td>
                     <td>{element.baseCurrency}</td>
                     <td>{element.amount}</td>

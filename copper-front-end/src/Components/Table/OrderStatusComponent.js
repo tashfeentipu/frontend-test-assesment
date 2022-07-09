@@ -7,13 +7,18 @@ const OrderStatusComponent = (props) => {
             {props.tableRowData.status}
         </div>
     }
-    return <>
-        <button onClick={() => {
-            props.rejectTransactionById(props.tableRowData.orderId)
-        }}>Reject</button>
-        <button onClick={() => {
-            props.approveTransactionById(props.tableRowData.orderId)
-        }}>Approve</button></>
+    return <div>
+        <button
+            className="rejectButton"
+            onClick={() => {
+                props.rejectTransactionById(props.tableRowData.orderId)
+            }}>Reject</button>
+        <button
+            className="acceptButton"
+            onClick={() => {
+                props.approveTransactionById(props.tableRowData.orderId)
+            }}>Approve</button>
+    </div>
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(OrderStatusComponent);

@@ -1,0 +1,123 @@
+.mainHeading {
+    width: auto;
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8em;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.mainHeading_container {
+    background: #F8FAFA;
+    border: 1px solid #E6EAEA;
+    border-radius: 0.5em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainHeading_container_2 {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mainHeading_orders {
+    width: 50%;
+}
+
+.mainHeading_orders_heading {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #86939E;
+}
+
+.mainHeading_orders_content {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 2em;
+}
+
+.mainHeading_amount {
+    width: 50%;
+    padding-left: 1em;
+    border-left: 1px solid #E6EAEA;
+}
+
+.mainHeading_amount_heading {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    color: #86939E;
+}
+
+.mainHeading_amount_content {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2em;
+    line-height: 2em;
+}
+
+.rejectButton {
+    border: none;
+    background: #BDC6CF;
+    border-radius: 10em;
+    width: 7em;
+    height: 2em;
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4em;
+    line-height: 2em;
+    color: #FFFFFF;
+}
+
+.acceptButton {
+    border: none;
+    background: #6AEAD4;
+    border-radius: 10em;
+    width: 7em;
+    height: 2em;
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.4em;
+    line-height: 2em;
+    color: #FFFFFF;
+    margin: 0.5em;
+}
+
+input[type=checkbox] {
+    background-color: none;
+    height: 1.8em;
+    width: 1.8em;
+    border: 0.2em solid #86939E;
+}
+
+input[type=checkbox]:checked {
+    accent-color: #6AEAD4;
+    border: 0.2em solid #6AEAD4;
+}
+
+.tableHeaderRow {}
+
+.tableHeaderRowData {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: #86939E;
+}

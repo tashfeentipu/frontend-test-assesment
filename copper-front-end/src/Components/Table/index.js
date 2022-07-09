@@ -4,6 +4,7 @@ import { Table } from "reactstrap";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import TableBody from "./TableBody";
 import TableHeader from "./TableHeader";
+import "./TableStyles.css";
 
 const getSelectedTransactions = (tableData) => {
     let selectedTransactionsArray = [...tableData]
@@ -25,14 +26,33 @@ const TableComponent = (props) => {
 
 
     return <>
-        <>
-            <button onClick={() => {
-                props.rejectTransactionByIds(getSelectedTransactions(props.tableData))
-            }}>Reject</button>
-            <button onClick={() => {
-                props.approveTransactionByIds(getSelectedTransactions(props.tableData))
-            }}>Approve</button>
-        </>
+        <div>
+            <div className="mainHeading">Transactions</div>
+            <div className="mainHeading_container">
+                <div className="mainHeading_container_2" >
+                    <div className="mainHeading_orders">
+                        <div className="mainHeading_orders_heading">All Orders</div>
+                        <div className="mainHeading_orders_content">{props.tableData.length}</div>
+                    </div>
+                    <div className="mainHeading_amount" >
+                        <div className="mainHeading_amount_heading">Total Amount</div>
+                        <div className="mainHeading_amount_content">1,367,987.01 USD</div>
+                    </div>
+                </div>
+                <div>
+                    <button className="rejectButton" onClick={() => {
+                        if (getSelectedTransactions(props.tableData).length !== 0) {
+                            props.rejectTransactionByIds(getSelectedTransactions(props.tableData))
+                        }
+                    }}>Reject</button>
+                    <button className="acceptButton" onClick={() => {
+                        if (getSelectedTransactions(props.tableData).length !== 0) {
+                            props.approveTransactionByIds(getSelectedTransactions(props.tableData))
+                        }
+                    }}>Approve</button>
+                </div>
+            </div>
+        </div>
         <Table>
             <TableHeader />
             <TableBody />
