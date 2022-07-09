@@ -13,7 +13,7 @@ export const GetAsync = async (baseURL) => {
   }
 };
 
-export const PutAsync = async (baseURL, body, headers) => {
+export const PutAsync = async (baseURL, headers, body) => {
   const response = await fetch(baseURL, {
     headers: headers,
     method: "PATCH",

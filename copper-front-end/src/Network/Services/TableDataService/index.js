@@ -13,5 +13,5 @@ export const updateTableDataByIdService = async (orderId, header) => {
 
 export const updateTableDataByIdsService = async (orderIds, header) => {
   const { updateTableDataByIds } = Endpoints;
-  return await PutAsync(updateTableDataByIds, orderIds, header);
+  return await PutAsync(updateTableDataByIds, header, orderIds);
 };

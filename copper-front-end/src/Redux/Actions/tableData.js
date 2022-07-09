@@ -1,4 +1,4 @@
-import { GET_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID, UPDATE_TABLE_DATA_BY_IDS } from "../Types";
+import { GET_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID, UPDATE_TABLE_DATA_BY_IDS, SELECT_ALL_TABLE_DATA, SELECT_TABLE_DATA } from "../Types";
 
 export const getTableDataAction = (data) => {
   return {
@@ -18,5 +18,19 @@ export const updateTableDataByIdsAction = (data) => {
   return {
     type: UPDATE_TABLE_DATA_BY_IDS,
     payload: data,
+  };
+};
+
+export const selectTableDataAction = (orderId, checked) => {
+  return {
+    type: SELECT_TABLE_DATA,
+    payload: { orderId, checked },
+  };
+};
+
+export const selectAllTableDataAction = (checked) => {
+  return {
+    type: SELECT_ALL_TABLE_DATA,
+    payload: { checked },
   };
 };

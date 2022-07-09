@@ -8,7 +8,11 @@ const TableBody = (props) => {
         {
             props.tableData.map(element => {
                 return <tr key={element.orderId} >
-                    <td><Input type="checkbox" /> </td>
+                    <td><Input type="checkbox"
+                        checked={element.selected}
+                        onChange={(event) => {
+                            props.selectTableData(element.orderId, event.target.checked)
+                        }} /> </td>
                     <td>{element.createdAt}</td>
                     <td>{element.orderType}</td>
                     <td>{element.portfolioName}</td>

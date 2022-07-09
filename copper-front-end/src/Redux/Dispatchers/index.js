@@ -1,4 +1,5 @@
 import { getTableData, updateTableDataById, updateTableDataByIds } from "../Middleware/tableData";
+import { selectAllTableDataAction, selectTableDataAction } from "../Actions/tableData";
 import { approveHeader, rejectHeader, approveBulkHeader, rejectBulkHeader } from "../../Constants/DataTableHeaders";
 
 export const mapDispatchToProps = (dispatch) => {
@@ -8,6 +9,8 @@ export const mapDispatchToProps = (dispatch) => {
     rejectTransactionById: (orderId) => dispatch(updateTableDataById(orderId, rejectHeader)),
     approveTransactionByIds: (orderIds) => dispatch(updateTableDataByIds(orderIds, approveBulkHeader)),
     rejectTransactionByIds: (orderIds) => dispatch(updateTableDataByIds(orderIds, rejectBulkHeader)),
+    selectTableData: (orderId, checked) => dispatch(selectTableDataAction(orderId, checked)),
+    selectAllTableData: (checked) => dispatch(selectAllTableDataAction(checked)),
   };
 };
 
