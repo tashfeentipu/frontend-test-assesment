@@ -192,7 +192,39 @@ input[type=checkbox]:checked {
     color: #30353B;
 }
 
-.tableBodyCurrency{
-    
+.tableBodyCurrencyContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
 }
 
+.tableBodyCurrencySubContainer {
+    display: flex;
+    flex: 0.35;
+}
+
+.tableBodyCurrencyImageContainer {
+    margin-top: 0.6em;
+    margin-bottom: 0.6em;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.tableBodyCurrencyText {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 2em;
+    color: #30353B;
+}
+
+.tableBodyCurrencySymbol {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9em;
+    line-height: 1.2em;
+    color: #86939E;
+}

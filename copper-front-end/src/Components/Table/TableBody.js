@@ -1,11 +1,12 @@
 import { connect } from "react-redux";
 import { Input } from "reactstrap";
 import './TableStyles.css'
-import OrderStatusComponent from "./OrderStatusComponent";
+import OrderStatusComponent from "./OrderStatus";
 import { dateConverter, timeConverter } from "../../Handlers";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import OrderType from "./OrderType";
 import OrderDate from "./OrderDate";
+import Currency from "./Currency";
 
 const TableBody = (props) => {
     return <tbody>
@@ -36,7 +37,9 @@ const TableBody = (props) => {
                             {element.portfolioName}
                         </div>
                     </td>
-                    <td>{element.baseCurrency}</td>
+                    <td>
+                        <Currency baseCurrency={element.baseCurrency} quoteCurrency={element.quoteCurrency} />
+                    </td>
                     <td>{element.amount}</td>
                     <td>
                         <OrderStatusComponent tableRowData={element} />

@@ -22,6 +22,7 @@ const TableComponent = (props) => {
     useEffect(() => {
         // Fetch all data when component loads
         props.getTableData()
+        props.getCurrenciesData()
     }, [])
 
 
@@ -53,7 +54,7 @@ const TableComponent = (props) => {
                 </div>
             </div>
         </div>
-        <Table>
+        <Table responsive >
             <TableHeader />
             <TableBody />
         </Table>

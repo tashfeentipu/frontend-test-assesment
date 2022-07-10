@@ -1,4 +1,5 @@
 import { getTableData, updateTableDataById, updateTableDataByIds } from "../Middleware/tableData";
+import { getCurrenciesDataMiddleware } from "../Middleware/currenciesData";
 import { selectAllTableDataAction, selectTableDataAction } from "../Actions/tableData";
 import { approveHeader, rejectHeader, approveBulkHeader, rejectBulkHeader } from "../../Constants/DataTableHeaders";
 
@@ -11,11 +12,13 @@ export const mapDispatchToProps = (dispatch) => {
     rejectTransactionByIds: (orderIds) => dispatch(updateTableDataByIds(orderIds, rejectBulkHeader)),
     selectTableData: (orderId, checked) => dispatch(selectTableDataAction(orderId, checked)),
     selectAllTableData: (checked) => dispatch(selectAllTableDataAction(checked)),
+    getCurrenciesData: () => dispatch(getCurrenciesDataMiddleware())
   };
 };
 
 export const mapStateToProps = (state) => {
   return {
     tableData: state.table.tableData,
+    currencies: state.currencies.currenciesData
   };
 };
