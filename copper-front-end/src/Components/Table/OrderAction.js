@@ -3,8 +3,8 @@ import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 
 const OrderStatusComponent = (props) => {
     if (props.tableRowData.orderStatus && props.tableRowData.status) {
-        return <div>
-            {props.tableRowData.status}
+        return <div className="tableBodyCompletedAction" >
+            Completed
         </div>
     }
     return <div>

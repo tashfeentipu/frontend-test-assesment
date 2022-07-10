@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { Input } from "reactstrap";
 import './TableStyles.css'
-import OrderStatusComponent from "./OrderStatus";
+import OrderStatusComponent from "./OrderAction";
 import { dateConverter, timeConverter } from "../../Handlers";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import OrderType from "./OrderType";

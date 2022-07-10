@@ -74,8 +74,8 @@
     border: none;
     background: #BDC6CF;
     border-radius: 10em;
-    width: 7em;
-    height: 2em;
+    width: 9em;
+    height: 3em;
     font-family: 'Regola Pro';
     font-style: normal;
     font-weight: 600;
@@ -88,8 +88,8 @@
     border: none;
     background: #6AEAD4;
     border-radius: 10em;
-    width: 7em;
-    height: 2em;
+    width: 9em;
+    height: 3em;
     font-family: 'Regola Pro';
     font-style: normal;
     font-weight: 600;
@@ -249,5 +249,19 @@ input[type=checkbox]:checked {
     font-weight: 400;
     font-size: 1em;
     line-height: 1.2em;
+    color: #86939E;
+}
+
+.tableBodyCompletedAction {
+    padding-left: 2em;
+    padding-right: 2em;
+    /* padding-top: 0.5em;
+    padding-bottom: 0.5m; */
+    width: fit-content;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    border-radius: 2em;
+    background: rgba(237, 237, 237, 0.56);
     color: #86939E;
 }

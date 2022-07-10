@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { connect } from "react-redux";
 import { Table } from "reactstrap";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
+import BulkOrderAction from "./BulkOrderAction";
 import TableBody from "./TableBody";
 import TableHeader from "./TableHeader";
 import "./TableStyles.css";
@@ -41,7 +42,8 @@ const TableComponent = (props) => {
                     </div>
                 </div>
                 <div>
-                    <button className="rejectButton" onClick={() => {
+                    <BulkOrderAction />
+                    {/* <button className="rejectButton" onClick={() => {
                         if (getSelectedTransactions(props.tableData).length !== 0) {
                             props.rejectTransactionByIds(getSelectedTransactions(props.tableData))
                         }
@@ -50,7 +52,7 @@ const TableComponent = (props) => {
                         if (getSelectedTransactions(props.tableData).length !== 0) {
                             props.approveTransactionByIds(getSelectedTransactions(props.tableData))
                         }
-                    }}>Approve</button>
+                    }}>Approve</button> */}
                 </div>
             </div>
         </div>
