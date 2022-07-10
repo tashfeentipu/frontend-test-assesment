@@ -1,25 +1,25 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from "react-redux";
 import { RightArrow } from '../../Assets';
 import './TableStyles.css';
 
 const Currency = (props) => {
-    const baseCurrency = useSelector(state => state.currencies.currenciesData)
-        .find(element => element.currency === props.baseCurrency)
-    const quoteCurrency = useSelector(state => state.currencies.currenciesData)
-        .find(element => element.currency === props.quoteCurrency)
-    console.log(baseCurrency, quoteCurrency);
+    const [baseCurrency, setBaseCurrency] = useState()
+    const [quoteCurrency, setQuoteCurrency] = useState()
+    const currenciesData = useSelector(state => state.currencies.currenciesData);
     useEffect(() => {
-    })
+        setBaseCurrency(currenciesData.find(element => element.currency === props.baseCurrency))
+        setQuoteCurrency(currenciesData.find(element => element.currency === props.quoteCurrency))
+    }, [currenciesData])
 
     return <div className="tableBodyCurrencyContainer" >
         <div className='tableBodyCurrencySubContainer' >
             <div className='tableBodyCurrencyImageContainer' >
-                <img src={`https://cdn.copper.co/static/currencies/${baseCurrency.currency.toLowerCase()}.svg`} />
+                {baseCurrency && <img src={`https://cdn.copper.co/static/currencies/${baseCurrency?.currency.toLowerCase()}.svg`} />}
             </div>
             <div>
-                <div className='tableBodyCurrencyText' >{baseCurrency.name}</div>
-                <div className='tableBodyCurrencySymbol'>{baseCurrency.symbol}</div>
+                <div className='tableBodyCurrencyText' >{baseCurrency?.name}</div>
+                <div className='tableBodyCurrencySymbol'>{baseCurrency?.currency}</div>
             </div>
         </div>
         <div>
@@ -27,11 +27,11 @@ const Currency = (props) => {
         </div>
         <div className='tableBodyCurrencySubContainer' >
             <div className='tableBodyCurrencyImageContainer'>
-                <img src={`https://cdn.copper.co/static/currencies/${quoteCurrency.currency.toLowerCase()}.svg`} />
+                {quoteCurrency && <img src={`https://cdn.copper.co/static/currencies/${quoteCurrency.currency.toLowerCase()}.svg`} />}
             </div>
             <div>
-                <div className='tableBodyCurrencyText'>{quoteCurrency.name}</div>
-                <div className='tableBodyCurrencySymbol'>{quoteCurrency.symbol}</div>
+                <div className='tableBodyCurrencyText'>{quoteCurrency?.name}</div>
+                <div className='tableBodyCurrencySymbol'>{quoteCurrency?.currency}</div>
             </div>
         </div>
     </div>

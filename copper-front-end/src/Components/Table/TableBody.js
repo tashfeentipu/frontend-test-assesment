@@ -7,6 +7,7 @@ import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import OrderType from "./OrderType";
 import OrderDate from "./OrderDate";
 import Currency from "./Currency";
+import Amount from "./Amount";
 
 const TableBody = (props) => {
     return <tbody>
@@ -40,7 +41,9 @@ const TableBody = (props) => {
                     <td>
                         <Currency baseCurrency={element.baseCurrency} quoteCurrency={element.quoteCurrency} />
                     </td>
-                    <td>{element.amount}</td>
+                    <td>
+                        <Amount element={element} />
+                    </td>
                     <td>
                         <OrderStatusComponent tableRowData={element} />
                     </td>

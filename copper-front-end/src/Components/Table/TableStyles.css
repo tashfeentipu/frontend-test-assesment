@@ -201,7 +201,7 @@ input[type=checkbox]:checked {
 
 .tableBodyCurrencySubContainer {
     display: flex;
-    flex: 0.35;
+    flex: 0.5;
 }
 
 .tableBodyCurrencyImageContainer {
@@ -225,6 +225,29 @@ input[type=checkbox]:checked {
     font-style: normal;
     font-weight: 400;
     font-size: 0.9em;
+    line-height: 1.2em;
+    color: #86939E;
+}
+
+.tableBodyAmountContainer {}
+
+.tableBodyBaseAmountContainerText {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 2.5em;
+    color: #30353B;
+}
+
+.tableBodyBaseAmountContainerSymbol {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
     line-height: 1.2em;
     color: #86939E;
 }
