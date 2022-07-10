@@ -121,3 +121,78 @@ input[type=checkbox]:checked {
     line-height: 1.4em;
     color: #86939E;
 }
+
+.tableDateContainer {
+    width: 4em;
+    background: #F8FAFA;
+    border-radius: 0.6em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableDateMonth {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1em;
+    color: #86939E;
+}
+
+.tableDate {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.8em;
+    color: #86939E;
+}
+
+.tableBodyOrderTypeDate {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.8em;
+    color: #86939E;
+}
+
+.tableBodyOrderTypeBuy {
+    color: #28CF3E;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 600;
+    background: #D2FFD8;
+}
+
+.tableBodyOrderTypeSell {
+    color: #FFA428;
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: 600;
+    background: #FFECD2;
+}
+
+.tableBodyAccountContainer {
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 2em;
+    color: #30353B;
+}
+
+.tableBodyCurrency{
+    
+}
+
