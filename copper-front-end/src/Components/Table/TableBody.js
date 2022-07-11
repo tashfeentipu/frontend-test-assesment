@@ -8,9 +8,10 @@ import OrderType from "./OrderType";
 import OrderDate from "./OrderDate";
 import Currency from "./Currency";
 import Amount from "./Amount";
+import Loader from "../Loader";
 
 const TableBody = (props) => {
-    return <>
+    return <Loader loading={props.tableLoading} >
         {
             props.tableData.map(element => {
 
@@ -55,7 +56,7 @@ const TableBody = (props) => {
                 </tr>
             })
         }
-    </>
+    </Loader>
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TableBody);

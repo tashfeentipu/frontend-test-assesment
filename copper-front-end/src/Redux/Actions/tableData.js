@@ -1,4 +1,8 @@
-import { GET_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID, UPDATE_TABLE_DATA_BY_IDS, SELECT_ALL_TABLE_DATA, SELECT_TABLE_DATA } from "../Types";
+import {
+  GET_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID,
+  UPDATE_TABLE_DATA_BY_IDS, SELECT_ALL_TABLE_DATA,
+  SELECT_TABLE_DATA, TABLE_DATA_LOADING
+} from "../Types";
 
 export const getTableDataAction = (data) => {
   return {
@@ -34,3 +38,11 @@ export const selectAllTableDataAction = (checked) => {
     payload: { checked },
   };
 };
+
+export const setTableLoadingAction = (loading) => {
+  return {
+    type: TABLE_DATA_LOADING,
+    payload: loading,
+  };
+};
+

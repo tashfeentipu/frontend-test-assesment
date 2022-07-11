@@ -1,0 +1,21 @@
+.LoaderContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.Loader {
+    animation: rotation 2s infinite linear;
+    display: flex;
+    border: none;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}

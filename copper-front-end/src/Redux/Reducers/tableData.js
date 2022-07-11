@@ -1,7 +1,12 @@
-import { GET_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID, UPDATE_TABLE_DATA_BY_IDS, SELECT_TABLE_DATA, SELECT_ALL_TABLE_DATA } from "../Types";
+import {
+  GET_TABLE_DATA, UPDATE_TABLE_DATA_BY_ID,
+  UPDATE_TABLE_DATA_BY_IDS, SELECT_TABLE_DATA,
+  SELECT_ALL_TABLE_DATA, TABLE_DATA_LOADING
+} from "../Types";
 
 const initialState = {
-  tableData: []
+  tableData: [],
+  tableLoading: false
 };
 
 export default function tableReducer(state = initialState, action) {
@@ -65,7 +70,14 @@ export default function tableReducer(state = initialState, action) {
         ...state,
         tableData: selectAllTableDataArray
       }
+
+    case TABLE_DATA_LOADING:
+      return {
+        ...state,
+        tableLoading: action.payload
+      }
     default:
       return state;
   }
+
 }

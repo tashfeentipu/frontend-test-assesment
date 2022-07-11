@@ -1,9 +1,10 @@
 import { LoaderImage } from "../../Assets";
+import "./styles.css"
 
 const Loader = (props) => {
-    return props.loading && <LoaderImage /> || <div>
+    return props.loading && <tr><div className="LoaderContainer" ><img src={LoaderImage} className="Loader" /></div></tr> || <>
         {props.children}
-    </div>
+    </>
 }
 
 export default Loader

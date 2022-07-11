@@ -19,6 +19,7 @@ export const mapDispatchToProps = (dispatch) => {
 export const mapStateToProps = (state) => {
   return {
     tableData: state.table.tableData,
-    currencies: state.currencies.currenciesData
+    currencies: state.currencies.currenciesData,
+    tableLoading: state.table.tableLoading
   };
 };
