@@ -9,6 +9,7 @@ export const getTableData = () => {
             dispatch(setTableLoadingAction(false))
             dispatch(getTableDataAction(response))
         } catch (error) {
+            dispatch(setTableLoadingAction(false))
             console.log(error);
         }
     };
@@ -22,6 +23,7 @@ export const updateTableDataById = (orderId, header) => {
             dispatch(setTableLoadingAction(false))
             dispatch(updateTableDataByIdAction(response))
         } catch (error) {
+            dispatch(setTableLoadingAction(false))
             console.log(error);
         }
     };
@@ -35,6 +37,7 @@ export const updateTableDataByIds = (orderIds, header) => {
             dispatch(setTableLoadingAction(false))
             dispatch(updateTableDataByIdsAction(response))
         } catch (error) {
+            dispatch(setTableLoadingAction(false))
             console.log(error);
         }
     };

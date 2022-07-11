@@ -300,6 +300,18 @@ tr:hover input[type=checkbox]:not(:checked) {
     justify-content: center;
 }
 
+.NoTransactionsContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #86939E;
+    font-family: 'Regola Pro';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4em;
+    line-height: 2em;
+}
+
 input[type=checkbox] {
     height: 1.8em;
     width: 1.8em;
@@ -307,9 +319,9 @@ input[type=checkbox] {
     cursor: pointer;
 }
 
-input[type=checkbox]:checked{
+input[type=checkbox]:checked {
     content: "";
     /* color: #6AEAD4 !important; */
-    background-color: #6AEAD4; 
+    background-color: #6AEAD4;
     border: 0.2em solid #6AEAD4;
 }
