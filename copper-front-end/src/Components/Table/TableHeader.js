@@ -6,23 +6,25 @@ import './TableStyles.css'
 
 const TableHeader = (props) => {
   const [checkboxSelected, setCheckboxSelected] = useState(false)
-  return <thead>
-    <tr className="tableHeaderRow" >
-      <th><Input type="checkbox"
-      className="checkbox"
-        checked={checkboxSelected}
-        onChange={(event) => {
-          setCheckboxSelected(event.target.checked)
-          props.selectAllTableData(event.target.checked)
-        }} /> </th>
-      <th className="tableHeaderRowData">Date</th>
-      <th className="tableHeaderRowData">Type</th>
-      <th className="tableHeaderRowData">Account</th>
-      <th className="tableHeaderRowData">Currency</th>
-      <th className="tableHeaderRowData">Amount</th>
-      <th className="tableHeaderRowData">Action</th>
-    </tr>
-  </thead>
+  return <tr className="tableHeaderRow" >
+    <th>
+      <div className="checkboxContainer">
+        <Input type="checkbox"
+          className="checkbox"
+          checked={checkboxSelected}
+          onChange={(event) => {
+            setCheckboxSelected(event.target.checked)
+            props.selectAllTableData(event.target.checked)
+          }} />
+      </div>
+    </th>
+    <th><div className="tableHeaderRowData">Date</div></th>
+    <th><div className="tableHeaderRowData">Type</div></th>
+    <th><div className="tableHeaderRowData">Account</div></th>
+    <th><div className="tableHeaderRowData">Currency</div></th>
+    <th><div className="tableHeaderRowData">Amount</div></th>
+    <th><div className="tableHeaderRowData">Action</div></th>
+  </tr>
 
 }
 

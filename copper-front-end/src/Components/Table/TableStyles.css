@@ -1,6 +1,6 @@
 .mainHeading {
     width: auto;
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 600;
     font-size: 1.8em;
@@ -31,7 +31,7 @@
 }
 
 .mainHeading_orders_heading {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.5em;
@@ -40,7 +40,7 @@
 }
 
 .mainHeading_orders_content {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 600;
     font-size: 2em;
@@ -54,7 +54,7 @@
 }
 
 .mainHeading_amount_heading {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.5em;
@@ -63,7 +63,7 @@
 }
 
 .mainHeading_amount_content {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 600;
     font-size: 2em;
@@ -76,7 +76,7 @@
     border-radius: 10em;
     width: 9em;
     height: 3em;
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4em;
@@ -90,7 +90,7 @@
     border-radius: 10em;
     width: 9em;
     height: 3em;
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 600;
     font-size: 1.4em;
@@ -111,15 +111,42 @@ input[type=checkbox]:checked {
     border: 0.2em solid #6AEAD4;
 }
 
-.tableHeaderRow {}
+.table {
+    width: max-content;
+}
+
+.tableHeaderRow {
+    height: 5em;
+    border-bottom: 2px solid #E6EAEA;
+}
+
+.tableBodyRow {
+    border-top: none !important;
+}
+
+.tableBodyOrderTypeContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OrderStatusContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .tableHeaderRowData {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.2em;
     line-height: 1.4em;
     color: #86939E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .tableDateContainer {
@@ -133,7 +160,7 @@ input[type=checkbox]:checked {
 }
 
 .tableDateMonth {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1em;
@@ -141,7 +168,7 @@ input[type=checkbox]:checked {
 }
 
 .tableDate {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.8em;
@@ -149,7 +176,7 @@ input[type=checkbox]:checked {
 }
 
 .tableBodyOrderTypeDate {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.2em;
@@ -184,12 +211,13 @@ input[type=checkbox]:checked {
 }
 
 .tableBodyAccountContainer {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.4em;
     line-height: 2em;
     color: #30353B;
+    text-align: center;
 }
 
 .tableBodyCurrencyContainer {
@@ -212,7 +240,7 @@ input[type=checkbox]:checked {
 }
 
 .tableBodyCurrencyText {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.4em;
@@ -221,7 +249,7 @@ input[type=checkbox]:checked {
 }
 
 .tableBodyCurrencySymbol {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 0.9em;
@@ -232,7 +260,7 @@ input[type=checkbox]:checked {
 .tableBodyAmountContainer {}
 
 .tableBodyBaseAmountContainerText {
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1.4em;
@@ -244,7 +272,7 @@ input[type=checkbox]:checked {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Regola Pro';
+    font-family: 'titillium';
     font-style: normal;
     font-weight: 400;
     font-size: 1em;
@@ -252,11 +280,14 @@ input[type=checkbox]:checked {
     color: #86939E;
 }
 
+.tableBodyCompletedActionContainer {
+    display: flex;
+    justify-content: center;
+}
+
 .tableBodyCompletedAction {
     padding-left: 2em;
     padding-right: 2em;
-    /* padding-top: 0.5em;
-    padding-bottom: 0.5m; */
     width: fit-content;
     height: 2em;
     display: flex;
@@ -264,4 +295,15 @@ input[type=checkbox]:checked {
     border-radius: 2em;
     background: rgba(237, 237, 237, 0.56);
     color: #86939E;
+}
+
+tr:hover {
+    background-color: rgba(106, 234, 212, 0.1);
+    cursor: pointer;
+}
+
+.checkboxContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

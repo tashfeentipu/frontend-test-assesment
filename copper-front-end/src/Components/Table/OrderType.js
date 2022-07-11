@@ -1,7 +1,7 @@
 import './TableStyles.css'
 
 const OrderType = (props) => {
-    return <div>
+    return <div className='tableBodyOrderTypeContainer'>
         {
             props.orderType === "buy" && <div className='tableBodyOrderTypeBuy' >B</div> ||
             <div className='tableBodyOrderTypeSell'>S</div>

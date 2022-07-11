@@ -10,17 +10,19 @@ import Currency from "./Currency";
 import Amount from "./Amount";
 
 const TableBody = (props) => {
-    return <tbody>
+    return <>
         {
             props.tableData.map(element => {
-                return <tr key={element.orderId} >
+                return <tr key={element.orderId} className="tableBodyRow" style={{ backgroundColor: element.selected && "rgba(106, 234, 212, 0.1)" }} >
                     <td>
-                        <Input
-                            type="checkbox"
-                            checked={element.selected}
-                            onChange={(event) => {
-                                props.selectTableData(element.orderId, event.target.checked)
-                            }} />
+                        <div className="checkboxContainer" >
+                            <Input
+                                type="checkbox"
+                                checked={element.selected}
+                                onChange={(event) => {
+                                    props.selectTableData(element.orderId, event.target.checked)
+                                }} />
+                        </div>
                     </td>
                     <td>
                         <OrderDate
@@ -48,10 +50,9 @@ const TableBody = (props) => {
                         <OrderStatusComponent tableRowData={element} />
                     </td>
                 </tr>
-
             })
         }
-    </tbody>
+    </>
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(TableBody);
