@@ -13,11 +13,14 @@ const TableBody = (props) => {
     return <>
         {
             props.tableData.map(element => {
+
+                const disabled = element.orderStatus && element.status
                 return <tr key={element.orderId} className="tableBodyRow" style={{ backgroundColor: element.selected && "rgba(106, 234, 212, 0.1)" }} >
                     <td>
                         <div className="checkboxContainer" >
                             <Input
                                 type="checkbox"
+                                disabled={disabled}
                                 checked={element.selected}
                                 onChange={(event) => {
                                     props.selectTableData(element.orderId, event.target.checked)
@@ -47,7 +50,7 @@ const TableBody = (props) => {
                         <Amount element={element} />
                     </td>
                     <td>
-                        <OrderStatusComponent tableRowData={element} />
+                        <OrderStatusComponent tableRowData={element} disabled={disabled} />
                     </td>
                 </tr>
             })

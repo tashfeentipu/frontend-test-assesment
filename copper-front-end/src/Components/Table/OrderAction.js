@@ -2,7 +2,7 @@ import { connect } from "react-redux";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 
 const OrderStatusComponent = (props) => {
-    if (props.tableRowData.orderStatus && props.tableRowData.status) {
+    if (props.disabled) {
         return <div className="tableBodyCompletedActionContainer">
             <div className="tableBodyCompletedAction" >
                 Completed
