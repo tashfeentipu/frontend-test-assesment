@@ -8,6 +8,13 @@ import TableHeader from "./TableHeader";
 import "./TableStyles.css";
 import { renderHeading } from "../../Handlers/HeadingHandler";
 
+const selectionChecker = (tableData) => {
+    const index = tableData.findIndex(element => {
+        return element.selected
+    })
+    return !(index === -1)
+}
+
 const TableComponent = (props) => {
     const [headings, setHeadings] = useState(renderHeading(props.tableData, props.currencies))
 
@@ -36,7 +43,7 @@ const TableComponent = (props) => {
                     </div>
                 </div>
                 <div>
-                    <BulkOrderAction />
+                    {selectionChecker(props.tableData) && <BulkOrderAction />}
                 </div>
             </div>
         </div>
