@@ -10,7 +10,6 @@ const Amount = ({ element }) => {
         setQuoteCurrency(currenciesData.find(placeholderElement => placeholderElement.currency === element.quoteCurrency))
     }, [currenciesData])
 
-    console.log(baseCurrency);
     return <div className="tableBodyAmountContainer">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
             <div className="tableBodyBaseAmountContainerText" >
