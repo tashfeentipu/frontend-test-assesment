@@ -7,8 +7,7 @@ import './TableStyles.css';
 const TableHeader = (props) => {
   const checkBoxRef = useRef()
   useEffect(() => {
-    console.log("Row Selected", props.rowSelected);
-    checkBoxRef.current.indeterminate = props.rowSelected
+    checkBoxRef.current.indeterminate = props.rowSelected && !props.headerCheckboxChecked
   }, [props.rowSelected])
   return <tr className="tableHeaderRow" >
     <th>
