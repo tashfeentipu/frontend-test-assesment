@@ -6,7 +6,8 @@ import {
 
 const initialState = {
   tableData: [],
-  tableLoading: false
+  tableLoading: false,
+  headerCheckboxChecked: false
 };
 
 export default function tableReducer(state = initialState, action) {
@@ -42,7 +43,8 @@ export default function tableReducer(state = initialState, action) {
       })
       return {
         ...state,
-        tableData: updatedTableData
+        tableData: updatedTableData,
+        headerCheckboxChecked: false
       }
 
     case SELECT_TABLE_DATA:
@@ -68,7 +70,8 @@ export default function tableReducer(state = initialState, action) {
 
       return {
         ...state,
-        tableData: selectAllTableDataArray
+        tableData: selectAllTableDataArray,
+        headerCheckboxChecked: action.payload.checked        
       }
 
     case TABLE_DATA_LOADING:

@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import { Input } from "reactstrap";
+import React from "react";
 import { connect } from "react-redux";
+import { Input } from "reactstrap";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
-import './TableStyles.css'
+import './TableStyles.css';
 
 const TableHeader = (props) => {
-  const [checkboxSelected, setCheckboxSelected] = useState(false)
   return <tr className="tableHeaderRow" >
     <th>
       <div className="checkboxContainer">
         <Input type="checkbox"
           className="checkbox"
-          checked={checkboxSelected}
+          checked={props.headerCheckboxChecked}
           onChange={(event) => {
-            setCheckboxSelected(event.target.checked)
             props.selectAllTableData(event.target.checked)
           }} />
       </div>

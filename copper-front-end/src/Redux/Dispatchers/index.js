@@ -20,6 +20,7 @@ export const mapStateToProps = (state) => {
   return {
     tableData: state.table.tableData,
     currencies: state.currencies.currenciesData,
-    tableLoading: state.table.tableLoading
+    tableLoading: state.table.tableLoading,
+    headerCheckboxChecked: state.table.headerCheckboxChecked
   };
 };
