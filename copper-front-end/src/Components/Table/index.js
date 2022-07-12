@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { connect } from "react-redux";
-import { cryptoToUSD, sumUSD } from "../../Handlers/cryptoToUSD";
+import { renderHeading } from "../../Handlers/HeadingHandler";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import BulkOrderAction from "./BulkOrderAction";
 import TableBody from "./TableBody";
 import TableHeader from "./TableHeader";
 import "./TableStyles.css";
-import { renderHeading } from "../../Handlers/HeadingHandler";
 
 const selectionChecker = (tableData) => {
     const index = tableData.findIndex(element => {

@@ -65,13 +65,17 @@ export default function tableReducer(state = initialState, action) {
     case SELECT_ALL_TABLE_DATA:
       let selectAllTableDataArray = [...state.tableData]
       selectAllTableDataArray = selectAllTableDataArray.map(element => {
-        return { ...element, selected: action.payload.checked }
+        const disabled = element.orderStatus && element.status
+        if (!disabled) {
+          return { ...element, selected: action.payload.checked }
+        }
+        return { ...element, selected: false }
       })
 
       return {
         ...state,
         tableData: selectAllTableDataArray,
-        headerCheckboxChecked: action.payload.checked        
+        headerCheckboxChecked: action.payload.checked
       }
 
     case TABLE_DATA_LOADING:
