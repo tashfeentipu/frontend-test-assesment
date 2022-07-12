@@ -48,7 +48,7 @@ const TableComponent = (props) => {
         </div>
         <div style={{ overflowX: "auto" }} >
             <table className="table">
-                <TableHeader />
+                <TableHeader rowSelected={selectionChecker(props.tableData)} />
                 <TableBody />
             </table>
         </div>
