@@ -341,7 +341,7 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]:indeterminate {
-    border: 0.2em solid #6AEAD4; 
+    border: 0.2em solid #6AEAD4;
 }
 
 input[type="checkbox"]:indeterminate::before {
@@ -352,4 +352,49 @@ input[type="checkbox"]:indeterminate::before {
 
 input[type="checkbox"]:checked {
     border: 0.2em solid #6AEAD4;
+}
+
+@media screen and (max-width: 768px) {
+    .mainHeading_container {
+        flex-direction: column;
+    }
+
+    .BulkOrderContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mainHeading_container_2 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .mainHeading_orders {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .mainHeading_orders_heading{
+        margin-right: 1em;
+    }
+
+    .mainHeading_orders_content{
+        margin-right: 1em;
+        font-size: 1.5em;
+    }
+
+    .mainHeading_amount {
+        width: 100%;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        border: none;
+    }
+
+    .mainHeading_amount_content{
+        font-size: 1.5em;
+        padding-left: 1em;
+    }
 }

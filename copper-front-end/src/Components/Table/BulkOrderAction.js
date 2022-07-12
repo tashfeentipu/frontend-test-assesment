@@ -13,7 +13,7 @@ const getSelectedTransactions = (tableData) => {
 }
 
 const BulkOrderAction = (props) => {
-    return <div>
+    return <div className="BulkOrderContainer" >
         <button className="rejectButton" onClick={() => {
             if (getSelectedTransactions(props.tableData).length !== 0) {
                 props.rejectTransactionByIds(getSelectedTransactions(props.tableData))
