@@ -6,6 +6,7 @@ const arrayTraversal = (arrayA, arrayB) => {
         for (let i = 0; i < arrayB?.length; i++) {
             if (arrayB[i].currency.toLowerCase() === arrayA[j].baseCurrency.toLowerCase()) {
                 usdValues.push(cryptoToUSD(arrayA[j].amount, arrayB[i]._embedded.price.price))
+                break
             }
         }
     }
