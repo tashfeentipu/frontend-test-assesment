@@ -341,9 +341,13 @@ input[type="checkbox"]:checked::before {
 }
 
 input[type="checkbox"]:indeterminate {
-    border: 0.2em solid #6AEAD4;
-    box-shadow: inset 0.1em 0.5em #6AEAD4;
+    border: 0.2em solid #6AEAD4; 
+}
 
+input[type="checkbox"]:indeterminate::before {
+    content: "";
+    clip-path: polygon(6% 40%, 95% 40%, 95% 63%, 6% 63%);
+    transform: scale(1);
 }
 
 input[type="checkbox"]:checked {
