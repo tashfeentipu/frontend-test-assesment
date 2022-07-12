@@ -1,37 +1,34 @@
 import { cryptoToUSD, sumUSD } from "./cryptoToUSD";
 
-export const renderHeading = (tableData, currencyData) => {
+const arrayTraversal = (arrayA, arrayB) => {
     const usdValues = []
+    for (let j = 0; j < arrayA?.length; j++) {
+        for (let i = 0; i < arrayB?.length; i++) {
+            if (arrayB[i].currency.toLowerCase() === arrayA[j].baseCurrency.toLowerCase()) {
+                usdValues.push(cryptoToUSD(arrayA[j].amount, arrayB[i]._embedded.price.price))
+            }
+        }
+    }
+    return usdValues
+}
+
+export const renderHeading = (tableData, currencyData) => {
     const selectedElements = tableData.filter(element => {
         return element.selected
     })
 
     if (selectedElements.length === 0) {
-        for (let j = 0; j < tableData?.length; j++) {
-            for (let i = 0; i < currencyData?.length; i++) {
-                if (currencyData[i].currency.toLowerCase() === tableData[j].baseCurrency.toLowerCase()) {
-                    usdValues.push(cryptoToUSD(tableData[j].amount, currencyData[i]._embedded.price.price))
-                }
-            }
-        }
         return {
             ordersHeading: "All Orders",
             ordersContent: tableData.length,
             amountHeading: "Total Amount",
-            amountContent: `${sumUSD(usdValues)} USD`
-        }
-    }
-    for (let j = 0; j < selectedElements?.length; j++) {
-        for (let i = 0; i < currencyData?.length; i++) {
-            if (currencyData[i].currency.toLowerCase() === selectedElements[j].baseCurrency.toLowerCase()) {
-                usdValues.push(cryptoToUSD(selectedElements[j].amount, currencyData[i]._embedded.price.price))
-            }
+            amountContent: `${sumUSD(arrayTraversal(tableData, currencyData))} USD`
         }
     }
     return {
         ordersHeading: "Selected Orders",
         ordersContent: selectedElements.length,
         amountHeading: "Total Selected Amount",
-        amountContent: `${sumUSD(usdValues)} USD`
+        amountContent: `${sumUSD(arrayTraversal(selectedElements, currencyData))} USD`
     }
 }
