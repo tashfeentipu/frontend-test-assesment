@@ -1,15 +1,4 @@
-import { memo, useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-
 const Amount = ({ element }) => {
-    const [baseCurrency, setBaseCurrency] = useState()
-    const [quoteCurrency, setQuoteCurrency] = useState()
-    const currenciesData = useSelector(state => state.currencies.currenciesData);
-    useEffect(() => {
-        setBaseCurrency(currenciesData.find(placeholderElement => placeholderElement.currency === element.baseCurrency))
-        setQuoteCurrency(currenciesData.find(placeholderElement => placeholderElement.currency === element.quoteCurrency))
-    }, [currenciesData])
-
     return <div className="tableBodyAmountContainer">
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }} >
             <div className="tableBodyBaseAmountContainerText" >
@@ -31,4 +20,4 @@ const Amount = ({ element }) => {
     </div>
 }
 
-export default memo(Amount);
+export default Amount;
