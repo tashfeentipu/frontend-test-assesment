@@ -21,7 +21,7 @@ const TableBody = (props) => {
                     return <tr key={element.orderId} className="tableBodyRow" style={{ backgroundColor: element.selected && "rgba(106, 234, 212, 0.1)" }} >
                         <td>
                             <div className="checkboxContainer" >
-                                <Input
+                                <input
                                     type="checkbox"
                                     disabled={disabled}
                                     checked={element.selected}
