@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import tableReducer from "../Reducers/tableData";
 import currenciesReducer from "../Reducers/currenciesReducer";
 
-const rootReducer = {
+export const rootReducer = {
   reducer: {
     table: tableReducer,
     currencies: currenciesReducer

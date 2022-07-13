@@ -18,7 +18,7 @@ const Currency = (props) => {
                 {baseCurrency && <img src={`https://cdn.copper.co/static/currencies/${baseCurrency?.currency.toLowerCase()}.svg`} />}
             </div>
             <div>
-                <div className='tableBodyCurrencyText' >{baseCurrency?.name}</div>
+                <div className='tableBodyCurrencyText' data-testid="baseCurrency" >{baseCurrency?.name}</div>
                 <div className='tableBodyCurrencySymbol'>{baseCurrency?.currency}</div>
             </div>
         </div>
