@@ -34,11 +34,11 @@ const TableComponent = (props) => {
                 <div className="mainHeading_container_2" >
                     <div className="mainHeading_orders">
                         <div className="mainHeading_orders_heading">{headings.ordersHeading}</div>
-                        <div className="mainHeading_orders_content">{headings.ordersContent}</div>
+                        <div className="mainHeading_orders_content" data-testid="mainHeaderOrdersContent" >{headings.ordersContent}</div>
                     </div>
                     <div className="mainHeading_amount" >
                         <div className="mainHeading_amount_heading">{headings.amountHeading}</div>
-                        <div className="mainHeading_amount_content">{headings.amountContent}</div>
+                        <div className="mainHeading_amount_content" data-testid="mainHeaderAmountContent" >{headings.amountContent}</div>
                     </div>
                 </div>
                 <div>
