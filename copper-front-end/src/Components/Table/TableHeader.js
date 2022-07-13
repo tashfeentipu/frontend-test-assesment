@@ -1,6 +1,5 @@
-import React, { useRef, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import { connect } from "react-redux";
-import { Input } from "reactstrap";
 import { mapDispatchToProps, mapStateToProps } from "../../Redux/Dispatchers";
 import './TableStyles.css';
 
